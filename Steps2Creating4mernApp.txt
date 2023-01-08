@@ -1,0 +1,12 @@
+1.First Create the Server then the REST API.
+	>Create a folder named Server
+	>In the folder, create a file named index.js
+	>Using cmd, navigate to the server folder & initialize the server.(npm init -y)
+	>A file named package.json will be created.
+	>Install express,mongoose,nodemon,dotenv
+	(npm install express nodemon mongoose dotenv)
+	>Open the package.json file & make below changes to the "scripts" section;
+	 ("start":"nodemon index.js") -This line of code means every time you start the server, nodemon initializes index.js
+	>Write the code for index.js
+	 (Declare express, mongoose & dotenv as constants then initialize the express app & finally add port number & connection status indicator)
+2.
