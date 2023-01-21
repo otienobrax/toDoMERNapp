@@ -8,7 +8,8 @@ const [itemText, setItemText] = useState('')
   //add new todo item to database
   const addItem = async () => {
     try{
-      const res = await axios.post()
+      const res = await axios.post('http://localhost:5500/api/item', {item: itemText})
+      console.log(res);
     }catch(err){
       console.log(err);
     }
@@ -19,7 +20,7 @@ const [itemText, setItemText] = useState('')
     <div className="App">
       <h1>Todo List</h1>
       <form className="form">
-        <input type="text" placeholder='Add Todo Item' onChange={e => {setItemText(e.target.value)} } value=(itemText)} } value=(itemText)/>
+        <input type="text" placeholder='Add Todo Item' onChange={e => {setItemText(e.target.value)} } value={itemText}/>
         <button type="submit">Add</button>
       </form>
       <div className="todo-listItems">
@@ -41,6 +42,5 @@ const [itemText, setItemText] = useState('')
       </div>
     </div>
   );
-}
-
+  }
 export default App;
